@@ -1285,6 +1285,9 @@ int main()
 
     LoadTMB("tmb_files/bloodtmb.tmb", 65, "bld");
 
+    LoadIBK("ibk_files/mc-genmidi.ibk", 66, "b66M", false);
+    LoadIBK("ibk_files/mc-drums.ibk",   66, "b66P", true);
+
     static const char* const banknames[] =
     {// 0
      "AIL (Star Control 3, Albion, Empire 2, Sensible Soccer, Settlers 2, many others)",
@@ -1358,7 +1361,8 @@ int main()
      "TMB (Duke Nukem 3D)",
      "TMB (Shadow Warrior)",
      "DMX (Raptor)",
-     "TMB (Blood)"
+     "TMB (Blood)",
+     "IBK (Midi Compozer)"
     };
 
 #if 0

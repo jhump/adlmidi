@@ -2384,10 +2384,11 @@ struct Reverb /* This reverb implementation is based on Freeverb impl. in Sox */
         {
             for(size_t a=0; a<length; ++a)
             {
-                float out = 0, in = input[a];
+                output[a] = input[a];
+/*                float out = 0, in = input[a];
                 for(size_t i=8; i-- > 0; ) out += comb[i].ProcessComb(in, feedback, hf_damping);
                 for(size_t i=4; i-- > 0; ) out += allpass[i].ProcessAllPass(out);
-                output[a] = out * gain;
+                output[a] = out * gain;*/
             }
         }
     } chan[2];

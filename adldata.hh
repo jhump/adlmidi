@@ -10,7 +10,7 @@ typedef unsigned char Uint8;
 typedef unsigned short Uint16;
 typedef unsigned Uint32;
 #else
-# include <SDL.h>
+# include <SDL/SDL.h>
 class MutexType
 {
     SDL_mutex* mut;
@@ -41,4 +41,4 @@ extern const struct adlinsdata
     Uint16 ms_sound_koff;
 } adlins[];
 extern const unsigned short banks[][256];
-extern const char* const banknames[66];
+extern const char* const banknames[67];

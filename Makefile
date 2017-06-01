@@ -6,7 +6,7 @@ CXXLINK=$(CXX)
 
 #DEBUG=-O0 -fno-inline -D_GLIBCXX_DEBUG -g -fstack-protector-all -fdata-sections
 
-DEBUG=-Og -g
+DEBUG=-O3 -g
 
 #DEBUG += -fno-tree-vectorize
 

@@ -1,0 +1,6 @@
+adlmidi
+gen_adldata
+dumpbank
+dumpmiles
+*.o
+.depend
