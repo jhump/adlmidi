@@ -312,12 +312,14 @@ public:
     {
         if(LogarithmicVolumes)
         {
-            Touch_Real(c, volume*127/(127*127*127));
+            Touch_Real(c, volume*63/(127*127*127));
         }
         else
         {
             // The formula below: SOLVE(V=127^3 * 2^( (A-63.49999) / 8), A)
-            Touch_Real(c, volume>8725  ? std::log(volume)*11.541561 + (0.5 - 104.22845) : 0);
+            double vf = volume*1.0/(127.0*127.0*127.0);
+            Touch_Real(c, (unsigned)(63*pow(vf,0.42)));
+            //Touch_Real(c, volume>8725  ? std::log(volume)*11.541561 + (0.5 - 104.22845) : 0);
 
             // The incorrect formula below: SOLVE(V=127^3 * (2^(A/63)-1), A)
             //Touch_Real(c, volume>11210 ? 91.61112 * std::log(4.8819E-7*volume + 1.0)+0.5 : 0);
